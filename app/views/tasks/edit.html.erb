@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Create a new task</h1>
+
+      <%= form_with model: @task do |t| %>
+        <%= t.label :title %>
+        <%= t.text_field :title %>
+        <%= t.label :details %>
+        <%= t.text_field :details %>
+        <%= t.label :completed %>
+        <%= t.check_box :completed %>
+        <%= t.submit class: "btn btn-primary" %>
+      <% end %>
+
+  <br>
+  <br>
+  <%= link_to '<i class="fa-solid fa-arrow-left"></i> Back to the list'.html_safe, tasks_path, class: 'icon' %>
+</div>
